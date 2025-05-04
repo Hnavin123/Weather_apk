@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+ul{
+    padding: 0px;
+}
+li{
+    list-style: none;
+}
+header{
+    height: 100px;
+    background-color: slategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategray;
+    color: white;
+}
+.weather-container{
+    display: flex;
+    gap: 1rem;
+}
