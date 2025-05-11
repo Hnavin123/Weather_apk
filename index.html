@@ -26,48 +26,11 @@
                 <span class="date">2025-05-4</span>
             </div>
             <div class="weather-state">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="">
+                <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" class="emoji">
                 <div class="condition">Sunny</div>
             </div>
         </div>
     </main>
-    <script>
-        const searchButton = document.getElementById('search');
-        searchButton.addEventListener('click', async function() {
-            const searchInput = document.querySelector('.input-container input');
-            const location = searchInput.value;
-            //const data = await fetchWeatherData(location);
-            if (location) {
-                const data = await fetchWeatherData(location);
-                //     fetchWeatherData(location).then((data) => {
-                //         updateDOM(data);
-                //     })
-                if(data==null){
-                   
-                }
-                else{
-                    updateDOM(data);
-                }
-                searchInput.value = ''; // Clear the input field after search
-            }
-        });
-
-        async function fetchWeatherData(location){
-            const url =`http://api.weatherapi.com/v1/current.json?key=baba38db925b49c9895105718250405&q=${location}&aqi=no`;
-            const response = await fetch(url);
-            if (response.status==404) {
-                alert('Location not found');
-            } else if(response.status==200){
-                const json = await response.json();
-                return json;
-            }
-        }
-
-        function updateDOM(data){
-            console.log("I will update the UI with this data");
-            console.log(data);
-        }
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
